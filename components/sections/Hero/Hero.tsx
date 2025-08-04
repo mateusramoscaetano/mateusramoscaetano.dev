@@ -2,11 +2,13 @@
 
 import React from 'react';
 import { ArrowRight, Download } from 'lucide-react';
-import { heroContent } from '../../../lib/constants';
+import { useLanguageContext } from '../../../lib/contexts/LanguageContext';
 import Button from '../../ui/Button';
 import Container from '../../ui/Container';
 
 const Hero: React.FC = () => {
+  const { translations } = useLanguageContext();
+  
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
@@ -23,24 +25,24 @@ const Hero: React.FC = () => {
       <Container>
         <div className="text-center max-w-4xl mx-auto">
           <p className="text-violet-400 font-mono text-sm mb-4">
-            Olá, eu sou
+            {translations.hero.greeting}
           </p>
 
           <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            {heroContent.name}
+            {translations.hero.name}
           </h1>
 
           <h2 className="text-2xl md:text-3xl text-gray-300 mb-4 font-mono">
-            {heroContent.title}
+            {translations.hero.title}
           </h2>
 
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-            {heroContent.subtitle}
+            {translations.hero.subtitle}
           </p>
 
           <div className="inline-flex items-center px-4 py-2 bg-gray-800 border border-gray-700 rounded-full text-gray-300 text-sm mb-12">
             <span className="w-2 h-2 bg-violet-500 rounded-full mr-3"></span>
-            {heroContent.experience}
+            {translations.hero.experience}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -50,7 +52,7 @@ const Hero: React.FC = () => {
               onClick={scrollToProjects}
               icon={<ArrowRight className="w-5 h-5" />}
             >
-              {heroContent.cta}
+              {translations.hero.cta}
             </Button>
 
             <Button
@@ -60,7 +62,7 @@ const Hero: React.FC = () => {
               icon={<Download className="w-5 h-5" />}
               
             >
-              Download CV
+              {translations.hero.downloadCV}
             </Button>
           </div>
 

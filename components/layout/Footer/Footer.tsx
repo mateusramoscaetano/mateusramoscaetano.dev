@@ -3,6 +3,7 @@
 import React from 'react';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import Container from '../../ui/Container';
+import { translations } from '@/lib/translations';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -15,17 +16,13 @@ const Footer: React.FC = () => {
     },
     {
       platform: 'LinkedIn',
-      url: 'https://linkedin.com/in/mateusramoscaetano',
+      url: 'https://www.linkedin.com/in/mateus-ramos-caetano-aaa425255',
       icon: <Linkedin className="w-4 h-4" />
     },
-    {
-      platform: 'Twitter',
-      url: 'https://twitter.com/mateusramoscaetano',
-      icon: <Twitter className="w-4 h-4" />
-    },
+
     {
       platform: 'Email',
-      url: 'mailto:mateus@example.com',
+      url: 'mailto:mateuscaetanodev@gmail.com',
       icon: <Mail className="w-4 h-4" />
     }
   ];
@@ -35,7 +32,7 @@ const Footer: React.FC = () => {
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="text-gray-400 text-sm">
-            © {currentYear} Mateus Ramos Caetano. Todos os direitos reservados.
+            © {currentYear} Mateus Ramos Caetano
           </div>
 
           <div className="flex gap-4">

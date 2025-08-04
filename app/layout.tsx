@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Fira_Code } from 'next/font/google'
+import { LanguageProvider } from '../lib/contexts/LanguageContext'
 
 const firaCode = Fira_Code({
   subsets: ['latin'],
@@ -38,7 +39,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <body className={`${firaCode.variable} bg-gray-950 text-white antialiased`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   )
