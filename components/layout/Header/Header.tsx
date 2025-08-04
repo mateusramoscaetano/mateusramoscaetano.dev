@@ -102,7 +102,7 @@ const Header: React.FC = () => {
         />
         
         {/* Menu Content */}
-        <div className="relative h-full flex items-center justify-center">
+        <div className="relative h-full flex items-center justify-center pt-20">
           <div className={`transform transition-all duration-700 ease-out ${
             isMenuOpen 
               ? 'translate-y-0 opacity-100 scale-100' 
