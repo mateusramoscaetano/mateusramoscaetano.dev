@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+tailwind-v4-installation.md
+nikita-design-system.md
+portfolio-project-prompt.md

@@ -58,6 +58,7 @@ const Hero: React.FC = () => {
               size="lg"
               onClick={downloadCV}
               icon={<Download className="w-5 h-5" />}
+              
             >
               Download CV
             </Button>
