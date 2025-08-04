@@ -3,12 +3,13 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import { useLanguageContext } from '../../../lib/contexts/LanguageContext';
+import { ContactFormData } from '../../../lib/types';
 import Container from '../../ui/Container';
 import Button from '../../ui/Button';
 
 const Contact: React.FC = () => {
   const { translations } = useLanguageContext();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     message: ''

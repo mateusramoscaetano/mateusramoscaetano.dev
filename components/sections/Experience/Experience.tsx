@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-// Removendo import do constants, agora usando dados traduzidos
 import { useLanguageContext } from '../../../lib/contexts/LanguageContext';
+import { ExperienceData } from '../../../lib/types';
 import Container from '../../ui/Container';
 import Card from '../../ui/Card';
 import Badge from '../../ui/Badge';
-import type { ExperienceData } from '@/lib/translations';
 
 const Experience: React.FC = () => {
   const { translations } = useLanguageContext();
@@ -28,7 +27,7 @@ const Experience: React.FC = () => {
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-800"></div>
 
           <div className="space-y-12">
-            {translations.experience.data.map((exp:ExperienceData, index: number) => (
+            {translations.experience.data.map((exp: ExperienceData, index: number) => (
               <div
                 key={exp.id}
                 className={`relative flex items-center ${

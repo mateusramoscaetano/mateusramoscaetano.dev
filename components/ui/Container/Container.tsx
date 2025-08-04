@@ -1,12 +1,7 @@
 import React from 'react';
+import { ContainerProps } from '../../../lib/types';
 
-interface ContainerProps {
-  children: React.ReactNode;
-  className?: string;
-  as?: keyof React.JSX.IntrinsicElements;
-}
-
-const Container: React.FC<ContainerProps> = ({
+const Container: React.FC<ContainerProps & { as?: keyof React.JSX.IntrinsicElements }> = ({
   children,
   className = '',
   as: Component = 'div'

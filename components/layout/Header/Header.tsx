@@ -1,16 +1,17 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe, User, Briefcase, FolderOpen, Mail, Home } from 'lucide-react';
+import { Menu, X, Globe, User, Briefcase, FolderOpen, Mail } from 'lucide-react';
 import Container from '../../ui/Container';
 import Button from '../../ui/Button';
 import { useLanguageContext } from '../../../lib/contexts/LanguageContext';
+import { NavigationItem } from '../../../lib/types';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, changeLanguage, translations } = useLanguageContext();
 
-  const navigationItems = [
+  const navigationItems: NavigationItem[] = [
     { href: '#about', label: translations.navigation.about, icon: <User className="w-5 h-5" /> },
     { href: '#experience', label: translations.navigation.experience, icon: <Briefcase className="w-5 h-5" /> },
     { href: '#projects', label: translations.navigation.projects, icon: <FolderOpen className="w-5 h-5" /> },

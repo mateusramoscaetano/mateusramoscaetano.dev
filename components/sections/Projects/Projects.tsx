@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { ExternalLink, Github, Eye } from 'lucide-react';
-// Removendo import do constants, agora usando dados traduzidos
 import { useLanguageContext } from '../../../lib/contexts/LanguageContext';
+import { ProjectData, FilterType } from '../../../lib/types';
 import Container from '../../ui/Container';
 import Card from '../../ui/Card';
 import Badge from '../../ui/Badge';
@@ -11,10 +11,10 @@ import Button from '../../ui/Button';
 
 const Projects: React.FC = () => {
   const { translations } = useLanguageContext();
-  const [filter, setFilter] = useState<'all' | 'featured'>('all');
+  const [filter, setFilter] = useState<FilterType>('all');
   
   // Adicionando propriedade featured aos dados traduzidos
-  const projectsWithFeatured = translations.projects.data.map((project, index) => ({
+  const projectsWithFeatured: ProjectData[] = translations.projects.data.map((project, index) => ({
     ...project,
     featured: index < 3, // Primeiros 3 projetos são destaque
     image: `/placeholder-project-${project.id}.jpg`,
@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
     demo: "#"
   }));
 
-  const filteredProjects = filter === 'featured' 
+  const filteredProjects: ProjectData[] = filter === 'featured' 
     ? projectsWithFeatured.filter(project => project.featured)
     : projectsWithFeatured;
 

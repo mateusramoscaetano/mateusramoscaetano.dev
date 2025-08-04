@@ -2,14 +2,7 @@
 
 import React, { createContext, useContext, ReactNode } from 'react';
 import { useLanguage } from '../hooks/useLanguage';
-import { Language } from '../translations';
-
-interface LanguageContextType {
-  language: Language;
-  changeLanguage: (language: Language) => void;
-  t: (key: string) => any;
-  translations: any;
-}
+import { LanguageContextType, Language } from '../types';
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -23,7 +16,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       value={{
         language,
         changeLanguage,
-        t: (key: string) => t(key as any),
+        t,
         translations
       }}
     >

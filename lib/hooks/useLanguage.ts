@@ -18,7 +18,7 @@ export const useLanguage = () => {
     localStorage.setItem('language', newLanguage);
   };
 
-  const t = (key: keyof Translations): any => {
+  const t = (key: string): string => {
     const keys = key.split('.');
     let value: any = translations[language];
     
