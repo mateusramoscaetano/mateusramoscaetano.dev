@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
                   icon={<Eye className="w-4 h-4" />}
                   className="flex-1"
                 >
-                  Ver Detalhes
+                  {translations.projects.viewProject}
                 </Button>
                 {project.github && (
                   <Button
