@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({
         )}
         <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
         {description && (
-          <p className="text-gray-400 mb-4 line-clamp-3">{description}</p>
+          <p className="text-gray-400 mb-4 line-clamp-3 min-h-12">{description}</p>
         )}
         {tags.length > 0 && (
           <div className="flex gap-2 flex-wrap">
