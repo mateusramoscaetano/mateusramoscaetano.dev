@@ -51,11 +51,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center mt-8 pt-8 border-t border-gray-800">
-          <p className="text-gray-500 text-sm">
-            Feito com ❤️ usando Next.js e Tailwind CSS
-          </p>
-        </div>
+     
       </Container>
     </footer>
   );
