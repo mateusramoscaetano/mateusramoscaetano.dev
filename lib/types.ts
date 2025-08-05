@@ -34,6 +34,14 @@ export interface ContainerProps {
   className?: string;
 }
 
+// Modal Props
+export interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  children: ReactNode;
+  className?: string;
+}
+
 // Data Interfaces
 export interface ExperienceData {
   id: number;
@@ -49,10 +57,11 @@ export interface ProjectData {
   id: number;
   title: string;
   description: string;
-  image: string;
+  shortDescription: string;
   technologies: string[];
-  github: string;
-  demo: string;
+  image: string;
+  github?: string;
+  demo?: string;
   featured: boolean;
 }
 
@@ -128,12 +137,8 @@ export interface Translations {
     interested: string;
     contact: string;
     highlight: string;
-    data: Array<{
-      id: number;
-      title: string;
-      description: string;
-      technologies: string[];
-    }>;
+    close: string;
+    data: ProjectData[];
   };
   contact: {
     title: string;

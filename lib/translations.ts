@@ -43,11 +43,17 @@ export interface Translations {
     interested: string;
     contact: string;
     highlight: string;
+    close: string;
     data: Array<{
       id: number;
       title: string;
       description: string;
+      shortDescription: string;
       technologies: string[];
+      image: string;
+      github?: string;
+      demo?: string;
+      featured: boolean;
     }>;
   };
   contact: {
@@ -158,42 +164,61 @@ export const translations: Record<Language, Translations> = {
         interested: "Interessado em trabalhar juntos?",
         contact: "Entre em Contato",
         highlight: "Destaque",
+        close: "Fechar",
         data: [
           {
             id: 1,
-            title: "Sistema de E-commerce",
-            description: "Plataforma completa de e-commerce com painel administrativo, integração de pagamentos e gestão de estoque.",
-            technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Docker"]
+            title: "Cora Cardiologia",
+            shortDescription: "Sistema de gerenciamento completo para clínica veterinária",
+            description: "Sistema de gerenciamento completo para a clínica Cora Cardiologia, que conta com acesso para clientes acessarem os laudos dos seus pets, clínicas fazerem upload dos laudos e o admin master (dono da Cora) gerenciar seus clientes, clínicas, doutores e fazer upload de laudos. O sistema oferece uma interface intuitiva e segura para todos os usuários.",
+            technologies: ["Next.js", "TypeScript", "PostgreSQL", "Docker", "Node.js"],
+            image: "/projects/cora-1.png",
+            featured: true
           },
           {
             id: 2,
-            title: "Dashboard Analytics",
-            description: "Dashboard interativo para visualização de dados e métricas em tempo real com gráficos avançados.",
-            technologies: ["React", "Node.js", "MongoDB", "Chart.js", "Redis"]
+            title: "Cardio Sarraff",
+            shortDescription: "Sistema de gerenciamento de laudos com envio por email",
+            description: "Sistema de gerenciamento de laudos similar ao da Cora, porém com funcionalidades adicionais como envio de laudos por email. Desenvolvido para otimizar o fluxo de trabalho da clínica, permitindo comunicação eficiente com clientes e parceiros através de notificações automatizadas.",
+            technologies: ["React", "Node.js", "MySQL", "Email API", "Docker"],
+            image: "/projects/cardio-2.png",
+            featured: true
           },
           {
             id: 3,
-            title: "API de Microserviços",
-            description: "Arquitetura de microserviços com Docker, orquestração de containers e CI/CD automatizado.",
-            technologies: ["Docker", "Node.js", "Redis", "PostgreSQL", "Kubernetes"]
+            title: "Go Barber",
+            shortDescription: "Sistema de gerenciamento para barbearias",
+            description: "Sistema de gerenciamento para barbearias desenvolvido e layoutado pela minha empresa Nestlab. Em desenvolvimento, visa trazer uma interface moderna e simples para os clientes e um sistema completo e funcional para seus contratantes. O projeto combina design intuitivo com funcionalidades robustas de agendamento e gestão.",
+            technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Docker"],
+            image: "/projects/go-barber.png",
+            featured: true
           },
           {
             id: 4,
-            title: "App de Gestão Financeira",
-            description: "Aplicativo mobile-first para controle de finanças pessoais com relatórios e metas.",
-            technologies: ["React Native", "Firebase", "Redux", "TypeScript"]
+            title: "Revelo",
+            shortDescription: "Site institucional para empresa de fotografia",
+            description: "Site desenvolvido para a empresa Revelo, especializada em fotografia de formandos. O projeto apresenta uma interface elegante e profissional, destacando os serviços oferecidos e o portfólio da empresa. Desenvolvido com foco na experiência do usuário e apresentação visual impactante.",
+            technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+            image: "/projects/revelo.png",
+            featured: false
           },
           {
             id: 5,
-            title: "Sistema de Chat em Tempo Real",
-            description: "Plataforma de comunicação em tempo real com WebSockets e notificações push.",
-            technologies: ["Socket.io", "React", "MongoDB", "Redis", "JWT"]
+            title: "Grupo Atmosfera",
+            shortDescription: "Landing page imersiva para grupo de multissoluções",
+            description: "Landing page imersiva e animada desenvolvida para o Grupo Atmosfera, um grupo de multissoluções para quem está na faculdade. O projeto apresenta uma experiência visual envolvente com animações suaves e design moderno, comunicando efetivamente os serviços e valores da empresa.",
+            technologies: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+            image: "/projects/atmosfera.png",
+            featured: false
           },
           {
             id: 6,
-            title: "Portfolio Profissional",
-            description: "Portfolio moderno e responsivo desenvolvido com Next.js e Tailwind CSS.",
-            technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
+            title: "Deep Sales",
+            shortDescription: "Landing page para gestão de vendas e leads",
+            description: "Landing page desenvolvida para a Deep Sales, empresa especializada em gestão de vendas e leads. O projeto apresenta uma interface profissional e focada em conversão, destacando os benefícios dos serviços oferecidos e facilitando o contato com potenciais clientes.",
+            technologies: ["React", "TypeScript", "Tailwind CSS", "Email Integration"],
+            image: "/projects/deep.png",
+            featured: false
           }
         ]
       },
@@ -290,42 +315,61 @@ export const translations: Record<Language, Translations> = {
         interested: "Interested in working together?",
         contact: "Get in Touch",
         highlight: "Featured",
+        close: "Close",
         data: [
           {
             id: 1,
-            title: "E-commerce System",
-            description: "Complete e-commerce platform with admin panel, payment integration and inventory management.",
-            technologies: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Docker"]
+            title: "Cora Cardiology",
+            shortDescription: "Complete management system for veterinary clinic",
+            description: "Complete management system for Cora Cardiology clinic, which includes access for clients to view their pets' reports, clinics to upload reports, and the master admin (Cora owner) to manage their clients, clinics, doctors and upload reports. The system offers an intuitive and secure interface for all users.",
+            technologies: ["Next.js", "TypeScript", "PostgreSQL", "Docker", "Node.js"],
+            image: "/projects/cora-1.png",
+            featured: true
           },
           {
             id: 2,
-            title: "Analytics Dashboard",
-            description: "Interactive dashboard for real-time data visualization and metrics with advanced charts.",
-            technologies: ["React", "Node.js", "MongoDB", "Chart.js", "Redis"]
+            title: "Cardio Sarraff",
+            shortDescription: "Report management system with email delivery",
+            description: "Report management system similar to Cora's, but with additional features such as email delivery of reports. Developed to optimize the clinic's workflow, allowing efficient communication with clients and partners through automated notifications.",
+            technologies: ["React", "Node.js", "MySQL", "Email API", "Docker"],
+            image: "/projects/cardio-2.png",
+            featured: true
           },
           {
             id: 3,
-            title: "Microservices API",
-            description: "Microservices architecture with Docker, container orchestration and automated CI/CD.",
-            technologies: ["Docker", "Node.js", "Redis", "PostgreSQL", "Kubernetes"]
+            title: "Go Barber",
+            shortDescription: "Management system for barbershops",
+            description: "Management system for barbershops developed and designed by my company Nestlab. Under development, it aims to bring a modern and simple interface for clients and a complete and functional system for contractors. The project combines intuitive design with robust scheduling and management features.",
+            technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Docker"],
+            image: "/projects/go-barber.png",
+            featured: true
           },
           {
             id: 4,
-            title: "Financial Management App",
-            description: "Mobile-first application for personal finance control with reports and goals.",
-            technologies: ["React Native", "Firebase", "Redux", "TypeScript"]
+            title: "Revelo",
+            shortDescription: "Institutional website for photography company",
+            description: "Website developed for Revelo company, specialized in graduation photography. The project presents an elegant and professional interface, highlighting the services offered and the company's portfolio. Developed with focus on user experience and impactful visual presentation.",
+            technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+            image: "/projects/revelo.png",
+            featured: false
           },
           {
             id: 5,
-            title: "Real-time Chat System",
-            description: "Real-time communication platform with WebSockets and push notifications.",
-            technologies: ["Socket.io", "React", "MongoDB", "Redis", "JWT"]
+            title: "Atmosphere Group",
+            shortDescription: "Immersive landing page for multi-solutions group",
+            description: "Immersive and animated landing page developed for Atmosphere Group, a multi-solutions group for college students. The project presents an engaging visual experience with smooth animations and modern design, effectively communicating the company's services and values.",
+            technologies: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+            image: "/projects/atmosfera.png",
+            featured: false
           },
           {
             id: 6,
-            title: "Professional Portfolio",
-            description: "Modern and responsive portfolio developed with Next.js and Tailwind CSS.",
-            technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
+            title: "Deep Sales",
+            shortDescription: "Landing page for sales and lead management",
+            description: "Landing page developed for Deep Sales, a company specialized in sales and lead management. The project presents a professional and conversion-focused interface, highlighting the benefits of the services offered and facilitating contact with potential clients.",
+            technologies: ["React", "TypeScript", "Tailwind CSS", "Email Integration"],
+            image: "/projects/deep.png",
+            featured: false
           }
         ]
       },
