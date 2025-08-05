@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   };
 
   const downloadCV = () => {
-    console.log('Downloading CV...');
+    window.open('/curriculo-mateus-ramos.pdf', '_blank');
   };
 
   return (

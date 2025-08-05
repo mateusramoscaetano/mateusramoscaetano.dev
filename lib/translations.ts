@@ -211,9 +211,9 @@ export const translations: Record<Language, Translations> = {
           },
           {
             id: 4,
-            title: "Revelo",
+            title: "Revelô",
             shortDescription: "Site institucional para empresa de fotografia",
-            description: "Site desenvolvido para a empresa Revelo, especializada em fotografia de formandos. O projeto apresenta uma interface elegante e profissional, destacando os serviços oferecidos e o portfólio da empresa. Desenvolvido com foco na experiência do usuário e apresentação visual impactante.",
+            description: "Site desenvolvido para a empresa Revelô, especializada em fotografia de formandos. O projeto apresenta uma interface elegante e profissional, destacando os serviços oferecidos e o portfólio da empresa. Desenvolvido com foco na experiência do usuário e apresentação visual impactante.",
             technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
             image: "/projects/revelo.png",
             featured: false
@@ -370,9 +370,9 @@ export const translations: Record<Language, Translations> = {
           },
           {
             id: 4,
-            title: "Revelo",
+            title: "Revelô",
             shortDescription: "Institutional website for photography company",
-            description: "Website developed for Revelo company, specialized in graduation photography. The project presents an elegant and professional interface, highlighting the services offered and the company's portfolio. Developed with focus on user experience and impactful visual presentation.",
+            description: "Website developed for Revelô company, specialized in graduation photography. The project presents an elegant and professional interface, highlighting the services offered and the company's portfolio. Developed with focus on user experience and impactful visual presentation.",
             technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
             image: "/projects/revelo.png",
             featured: false
