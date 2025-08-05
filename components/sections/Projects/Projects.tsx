@@ -122,11 +122,11 @@ const Projects: React.FC = () => {
           <div className="p-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Image */}
-              <div className="relative group">
+              <div className="relative group flex items-center justify-center">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-64 lg:h-80 object-cover rounded-xl shadow-2xl"
+                  className="w-full h-auto max-h-96 object-contain rounded-xl shadow-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>

@@ -24,8 +24,12 @@ const Card: React.FC<CardProps> = ({
     return (
       <div className={classes}>
         {image && (
-          <div className="aspect-video bg-gradient-to-br from-violet-500 to-pink-500 rounded-lg mb-4 overflow-hidden">
-            <div className="w-full h-full bg-gradient-to-br from-violet-500 to-pink-500 opacity-80"></div>
+          <div className="aspect-video rounded-lg mb-4 overflow-hidden bg-gray-800">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
           </div>
         )}
         <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
