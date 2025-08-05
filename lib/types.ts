@@ -118,6 +118,12 @@ export interface Translations {
     technologies: string;
     more: string;
   };
+  skills: {
+    frontend: string[];
+    backend: string[];
+    database: string[];
+    tools: string[];
+  };
   experience: {
     title: string;
     present: string;

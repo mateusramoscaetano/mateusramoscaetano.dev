@@ -16,6 +16,12 @@ export interface Translations {
     technologies: string;
     more: string;
   };
+  skills: {
+    frontend: string[];
+    backend: string[];
+    database: string[];
+    tools: string[];
+  };
   experience: {
     title: string;
     present: string;
@@ -118,6 +124,12 @@ export const translations: Record<Language, Translations> = {
              e experiência do usuário excepcional.`,
        technologies: "Tecnologias",
        more: "mais"
+     },
+     skills: {
+       frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "JavaScript ES6+"],
+       backend: ["Node.js", "Express.js", "Fastify", "RESTful APIs", "GraphQL"],
+       database: ["PostgreSQL", "MongoDB", "Redis", "SQL", "NoSQL"],
+       tools: ["Docker", "Git", "Zod", "React Query", "SSR/SSG", "Vercel", "AWS"]
      },
            experience: {
         title: "Experiência",
@@ -271,6 +283,12 @@ export const translations: Record<Language, Translations> = {
              I believe in the importance of clean code, solid architecture and exceptional user experience.`,
        technologies: "Technologies",
        more: "more"
+     },
+     skills: {
+       frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "JavaScript ES6+"],
+       backend: ["Node.js", "Express.js", "Fastify", "RESTful APIs", "GraphQL"],
+       database: ["PostgreSQL", "MongoDB", "Redis", "SQL", "NoSQL"],
+       tools: ["Docker", "Git", "Zod", "React Query", "SSR/SSG", "Vercel", "AWS"]
      },
            experience: {
         title: "Experience",

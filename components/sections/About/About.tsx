@@ -1,13 +1,19 @@
 'use client';
 
 import React from 'react';
-import { skillsByCategory } from '../../../lib/constants';
 import { useLanguageContext } from '../../../lib/contexts/LanguageContext';
 import Container from '../../ui/Container';
 import Badge from '../../ui/Badge';
 
 const About: React.FC = () => {
   const { translations } = useLanguageContext();
+  
+  const skillsByCategory = {
+    frontend: translations.skills.frontend,
+    backend: translations.skills.backend,
+    database: translations.skills.database,
+    tools: translations.skills.tools
+  };
   
   return (
     <section id="about" className="py-20 bg-gray-900">
@@ -37,13 +43,13 @@ const About: React.FC = () => {
                     <div className="flex flex-wrap gap-2">
                       {skills.slice(0, 4).map((skill) => (
                         <Badge
-                          key={skill.name}
+                          key={skill}
                           variant="technology"
                           color={category === 'frontend' ? 'blue' : 
                                  category === 'backend' ? 'violet' : 
                                  category === 'database' ? 'pink' : 'gray'}
                         >
-                          {skill.name}
+                          {skill}
                         </Badge>
                       ))}
                                              {skills.length > 4 && (
