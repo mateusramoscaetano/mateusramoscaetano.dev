@@ -138,6 +138,8 @@ export interface Translations {
     contact: string;
     highlight: string;
     close: string;
+    aboutProject: string;
+    technologiesUsed: string;
     data: ProjectData[];
   };
   contact: {

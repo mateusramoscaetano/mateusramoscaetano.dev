@@ -44,6 +44,8 @@ export interface Translations {
     contact: string;
     highlight: string;
     close: string;
+    aboutProject: string;
+    technologiesUsed: string;
     data: Array<{
       id: number;
       title: string;
@@ -165,6 +167,8 @@ export const translations: Record<Language, Translations> = {
         contact: "Entre em Contato",
         highlight: "Destaque",
         close: "Fechar",
+        aboutProject: "Sobre o Projeto",
+        technologiesUsed: "Tecnologias Usadas",
         data: [
           {
             id: 1,
@@ -316,6 +320,8 @@ export const translations: Record<Language, Translations> = {
         contact: "Get in Touch",
         highlight: "Featured",
         close: "Close",
+        aboutProject: "About Project",
+        technologiesUsed: "Technologies Used",
         data: [
           {
             id: 1,

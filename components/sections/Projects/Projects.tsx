@@ -144,7 +144,7 @@ const Projects: React.FC = () => {
 
                 <div>
                   <h4 className="text-xl font-semibold text-white mb-3">
-                    Sobre o Projeto
+                    {translations.projects.aboutProject}
                   </h4>
                   <p className="text-gray-300 leading-relaxed">
                     {selectedProject.description}
@@ -153,7 +153,7 @@ const Projects: React.FC = () => {
 
                 <div>
                   <h4 className="text-xl font-semibold text-white mb-3">
-                    Tecnologias Utilizadas
+                    {translations.projects.technologiesUsed}
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech) => (
